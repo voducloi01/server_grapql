@@ -1,4 +1,5 @@
 import { Products } from './Entities/Product';
+import { Carts } from './Entities/Cart';
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import { schema } from "./Schema";
@@ -16,7 +17,7 @@ const main = async () => {
     password: "",
     logging: true,
     synchronize: false,
-    entities: [Users, Products],
+    entities: [Users, Products ,Carts],
   });
 
   const app = express();
